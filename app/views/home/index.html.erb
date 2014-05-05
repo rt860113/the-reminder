@@ -1,0 +1,56 @@
+<script>
+$(function(){
+  $('#myCarousel').carousel();
+});
+</script>
+<style type="text/css">
+	.title{
+		text-align: center;
+		font-weight: bold;
+		}
+	.para{
+		font-family: arial,sans-serif;
+	}
+	body{
+		/*background-color: pink;*/
+	}
+</style>
+<div class="container">
+	<div class="row title" id="title">
+		<h1>Make Your Life Better and Easier</h1>
+	</div>
+	<div class="row" id="description">
+		<div class="col-xs-6"><%= image_tag("sample.png", class: "chart1") %></div>
+		<div class="col-xs-6 para">
+			<p>Tired of unorganized life style? Did you forget your mom's birthday?...<span>Don't worry about them anymore. With Group Task Helper. We will help you take care of those problems.</span><%= link_to "Try it today!", new_user_registration_path %>Existing member? <%= link_to "Sign In here", new_user_session_path %>.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div id="myCarousel" class="carousel slide">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <%= image_tag("struggle1.jpg", class: "img-responsive fontpage") %>
+		    </div>
+		    <div class="item">
+		      <%= image_tag("struggle2.jpg", class: "img-responsive fontpage") %>
+		    </div>
+		    <div class="item">
+		    	<%= image_tag("struggle3.jpg", class: "img-responsive fontpage") %>
+		    </div>
+		  </div>
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    <span class="icon-prev"></span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		    <span class="icon-next"></span>
+		  </a>  
+		</div>
+	</div>
+</div>
