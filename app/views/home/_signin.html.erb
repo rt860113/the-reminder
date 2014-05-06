@@ -1,0 +1,41 @@
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+			<form accept-charset="UTF-8" action="/users/sign_in" class="new_user form" id="new_user" method="post" role="form">
+				<div style="display:none">
+					<input name="utf8" type="hidden" value="✓">
+					<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+				</div>
+			  	<div class="form-group">
+			  		<label for="user_email">Email:</label><br>
+			  		<input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="">
+			  	</div>
+
+			  	<div class="form-group">
+			  		<label for="user_password">Password:</label><br>
+			    	<input autocomplete="off" id="user_password" class="form-control" name="user[password]" type="password">
+			    </div>
+			    <div class="form-group">
+			    	<input name="user[remember_me]" type="hidden" value="0">
+			    	<input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" class="form-control" > 
+			    	<label for="user_remember_me">Remember me</label>
+			    </div>
+			  	<div>
+			  		<input name="commit" type="submit" value="Sign in">
+			  	</div>
+			</form>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <div><%= link_to "Back to main", root_path %>|<%= render "devise/shared/links" %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
