@@ -28,7 +28,7 @@ $(function(){
 	<div class="row" id="description">
 		<div class="col-xs-6"><%= image_tag("sample.png", class: "chart1") %></div>
 		<div class="col-xs-6 para">
-			<p class="slogan" >Tired of unorganized life style? Did you forget your mom's birthday?...<span>Don't worry about them anymore. With Group Task Helper. We will help you take care of those problems.</span><%= link_to "Try it today!", new_user_registration_path %>Existing member? <%= link_to "Sign In here", new_user_session_path %>.</p>
+			<p class="slogan" >Tired of unorganized life style? Did you forget your mom's birthday?...<span>Don't worry about them anymore. With Group Task Helper. We will help you take care of those problems.</span><a data-toggle="modal" data-target="#mymodal_signup">Try it today!</a>Existing member? <a data-toggle="modal" data-target="#mymodal_signin" >Sign in here</a>.</p>
 		</div>
 	</div>
 	<div class="row">
@@ -58,5 +58,9 @@ $(function(){
 		    <span class="icon-next"></span>
 		  </a>  
 		</div>
+	</div>
+	<div >
+		<%= render "signup" %>
+		<%= render "signin" %>
 	</div>
 </div>

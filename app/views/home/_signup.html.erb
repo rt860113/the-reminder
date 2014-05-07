@@ -1,4 +1,4 @@
-<div class="modal fade">
+<div class="modal fade" id="mymodal_signup">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -39,7 +39,7 @@
     	  </div>
   		</div>
       <div class="modal-footer">
-        <div><%= link_to "Back to main", root_path %>|<%= render "devise/shared/links" %></div>
+        <div><%= link_to "Back to main", root_path %>|<%= link_to "Sign in", "users/sign_in" %></div>
       </div>
     </div>
   </div>
